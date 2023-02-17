@@ -8,7 +8,7 @@ import Foundation
 /// quality of the interval (essentialy number of semitones away).
 /// Some Intervals refer to the same difference in pitch.
 public enum Interval: Int, CaseIterable {
-    /// Perfect Unison
+    /// Perfect Uniso
     case P1
 
     /// Minor Second
@@ -16,6 +16,9 @@ public enum Interval: Int, CaseIterable {
 
     /// Major Second
     case M2
+
+    /// Augmented Second
+    case A2
 
     /// Minor Third
     case m3
@@ -86,6 +89,7 @@ public enum Interval: Int, CaseIterable {
         case .P1: return 0
         case .m2: return 1
         case .M2: return 2
+        case .A2: return 3
         case .m3: return 3
         case .M3: return 4
         case .d4: return 4
@@ -116,6 +120,7 @@ public enum Interval: Int, CaseIterable {
         case .P1: return 1
         case .m2: return 2
         case .M2: return 2
+        case .A2: return 2
         case .m3: return 3
         case .M3: return 3
         case .d4: return 4
@@ -173,6 +178,7 @@ extension Interval: CustomStringConvertible {
         case .P1: return "P1"
         case .m2: return "m2"
         case .M2: return "M2"
+        case .A2: return "A2"
         case .m3: return "m3"
         case .M3: return "M3"
         case .d4: return "d4"
@@ -203,6 +209,7 @@ extension Interval: CustomStringConvertible {
         case .P1: return "Perfect Unison"
         case .m2: return "Minor Second"
         case .M2: return "Major Second"
+        case .A2: return "Augmented Second"
         case .m3: return "Minor Third"
         case .M3: return "Major Third"
         case .d4: return "Diminished Fourth"
